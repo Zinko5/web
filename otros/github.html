@@ -77,24 +77,34 @@
         pedira el nombre de usuario (de github) y la contraseña, que sera la
         llave que creamos antes <br /><br />
 
-        <!-- <div class="subtitulo">Crear repositorio</div>
+        <div class="subtitulo">Crear repositorio desde cero</div>
 
-            # Si el directorio todavia no existe como repositorio en github, <a href="https://github.com/new" target="_blank">crearlo</a> y poner en la consola
-            <code>
-                git init<br>
-                git branch -M main
-            </code>
-            # Si queremos vincular el directorio con github con HTTPS:
-            <code>
-                git remote add origin https://github.com/TuUsuariodeGithub/NombredelRepositorio.git<br>
-                git push -u origin main
-            </code>
-            
-            # Si queremos vincular el directorio con github con SSH:
-            <code>
-                git remote add origin git@github.com:TuUsuariodeGithub/NombredelRepositorio.git<br>
-                git push -u origin main
-            </code> -->
+        # Si el directorio local todavía no es un repositorio de git, inicializarlo en la consola:
+        <code>git init</code>
+        
+        # Agregar todos los archivos del proyecto al área de preparación:
+        <code>git add .</code>
+        
+        # Hacer el primer commit:
+        <code>git commit -m "primer commit"</code>
+        
+        # Cambiar la rama principal a main:
+        <code>git branch -M main</code>
+        
+        # <a href="https://github.com/new" target="_blank">Crear un repositorio vacío en github</a> (sin agregar README ni .gitignore) y vincularlo:
+        <br><br>
+
+        # Si queremos vincular el directorio con github con HTTPS:
+        <code>
+            git remote add origin https://github.com/TuUsuariodeGithub/NombredelRepositorio.git<br>
+            git push -u origin main
+        </code>
+        
+        # Si queremos vincular el directorio con github con SSH:
+        <code>
+            git remote add origin git@github.com:TuUsuariodeGithub/NombredelRepositorio.git<br>
+            git push -u origin main
+        </code><br>
             # Ahora podemos usar los comando git add, git commit - m "mensaje
             indicando los cambios en el proyecto", git push, git pull, git branch y
             git checkout en el directorio
