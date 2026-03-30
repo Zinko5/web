@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Linux - Configuración de Lenguajes</title>
+    <link rel="stylesheet" href="../static/style.css">
+</head>
+
+<body>
+    <header class="space">
+        Guia de Linux
+    </header>
+
+    <article>
+        <div id="directorio">
+            <a href="../index.html">Inicio</a> >
+            <a href="otrosMenu.html">Otros</a> >
+            <a href="configuracionLenguajes.html">Configuración de Lenguajes</a>
+        </div>
+        <div id="titulo">Configuración y uso de lenguajes (Terminal)</div>
+
+        <div class="texto">
+            <div class="subtitulo">C# (.NET)</div>
+            A diferencia de scripts simples, C# requiere una estructura de proyecto para gestionar dependencias y
+            compilación.
+
+            <br><br># Crear un nuevo proyecto de consola
+            <code>dotnet new console -n MiProyecto</code>
+
+            # Entrar a la carpeta y ejecutar el proyecto
+            <code>cd MiProyecto<br>dotnet run</code>
+
+            # Crear el ejecutable (compilar)
+            <code>dotnet build</code>
+
+            # Publicar como ejecutable único para Linux
+            <code>dotnet publish -c Release -r linux-x64 --self-contained</code>
+
+            <div class="subtitulo">Python 3</div>
+            Es recomendable usar entornos virtuales (venv) para no ensuciar las librerías del sistema.
+
+            <br># Crear el entorno virtual
+            <code>python3 -m venv .venv</code>
+
+            # Activar el entorno
+            <code>source .venv/bin/activate</code>
+
+            # Instalar librerías
+            <code>pip install nombre_libreria</code>
+
+            # Guardar librerías instaladas en un archivo
+            <code>pip freeze > requirements.txt</code>
+
+            # Instalar librerías desde un archivo
+            <code>pip install -r requirements.txt</code>
+
+            # Salir del entorno virtual
+            <code>deactivate</code>
+
+            # Levantar un servidor web rápido en el puerto 8000
+            <code>python3 -m http.server 8000</code>
+
+            # Abrir el servidor en un directorio concreto
+            <code>python3 -m http.server 8000 --directory /ruta/a/tu/carpeta</code>
+
+            <div class="subtitulo">Java</div>
+            Para proyectos Java, se recomienda organizar el código en carpetas y usar nombres de clase que coincidan con
+            el archivo.
+            <br><br>
+
+
+            # Estructura recomendada: CarpetaProyecto/src/Principal.java
+            <br><br>
+            # Compilar el proyecto (enviando el resultado a la carpeta bin)
+            <code>javac -d bin src/*.java</code>
+
+            # Ejecutar el proyecto desde la carpeta bin
+            <code>java -cp bin Principal</code>
+
+            # Listar versiones de Java instaladas
+            <code>sudo update-alternatives --display java</code>
+
+            # Cambiar la versión por defecto de Java
+            <code>sudo update-alternatives --config java</code>
+
+            <div class="subtitulo">R (Configuración para VSCode)</div>
+            Para que R funcione correctamente en VSCode y tenga mejores visualizaciones, sigue estos pasos:
+
+            <br># Abrir R en la terminal y ejecutar:
+            <code>install.packages("languageserver")<br>install.packages("httpgd")</code>
+
+            # Configuración en VSCode:
+            <br>
+            1. Instala la extensión "R" de REditorSupport.
+            <br>
+            2. Ve a Ajustes (Ctrl + ,) y busca <b>r.plot.useHttpgd</b>.
+            <br>
+            3. Activa la casilla para que los gráficos salgan en una ventana interactiva y redimensionable en VSCode.
+
+            <br># Alternativa para ventana externa en Linux:
+            En el script de R, usa el comando <code>X11()</code> antes de graficar.
+        </div>
+    </article>
+
+    <footer class="space">
+        Configuración de entornos de desarrollo
+    </footer>
+
+    <script src="../static/script.js"></script>
+</body>
+
+</html>
